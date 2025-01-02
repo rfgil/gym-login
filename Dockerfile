@@ -13,6 +13,7 @@ COPY ./Gemfile /app/
 RUN bundle install
 
 COPY ./sinatra.rb /app/
+COPY ./.env /app/
 
 EXPOSE 4567
 CMD ["bundle", "exec", "ruby", "sinatra.rb", "-o", "0.0.0.0"]
